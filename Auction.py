@@ -58,14 +58,18 @@ def Forward_Auction(Aij, S, p, q):
                 S.remove(S[i])
                 break
         S.append([Pi, j+1])
-        print("\nCurrent Assignement: ", S)
+        print("\nCurrent Assignment: ", S)
 
         # Selecting the person i to assign
         assigned = []  # list to  keep track of persons that are assigned
         for i in range(len(S)):
             assigned.append(S[i][0])
         if len(assigned) == len(q):
-            # Completed if symmetric else reverse auction
+            if len(p) == len(q):
+                print("\nFinal Assignment for the Symmetric Problem is-")
+                print(S)
+            else:
+                Reverse_Auction()
             return
         unass = [person for person in [i+1 for i in range(len(q))] if person not in assigned]
 
