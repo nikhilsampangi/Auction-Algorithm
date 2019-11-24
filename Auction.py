@@ -6,7 +6,7 @@ def Input(Aij):
     print("\nNetwork Optimimzation Programming Assignment #3")
     print("\nAuction Algorithm")
     max_a = 0
-    if(Aij == []):  # Manual Input
+    if(Aij == []):  # For Manual Input
         n = int(input("\nNo of Persons : "))
         m = int(input("\nNo of Objects : "))
         print("\nEnter the Benefit(aij) martix Aij :")
@@ -19,6 +19,10 @@ def Input(Aij):
                 print("\nError: Expected ", m, " values in a row")
                 return
     else:
+        print("\nGiven Input -\n")
+        for lines in Aij:
+            print(lines)
+        # print(\n)
         m = len(Aij[0])
         n = len(Aij)
         for i in range(n):
@@ -135,4 +139,4 @@ def Reverse_Auction(Aij, S, p, q):
 #
 # Asymmetric Examples
 # Input([[8, 2, 10, 16, 1], [10, 8, 12, 13, 1], [17, 5, 11, 9, 1], [9, 6, 9, 7, 1]])
-Input([[8, 2, 10, 16, 14], [10, 8, 12, 13, 13], [17, 5, 11, 9, 15], [9, 6, 9, 7, 10]])
+Input([[8, 2, 10, 16, 14], [10, 8, 12, 13, 14], [17, 5, 11, 9, 15], [9, 6, 9, 7, 10]])
