@@ -68,15 +68,8 @@ def Forward_Auction(Aij, S, p, q):
             if len(p) == len(q):
                 print("\nFinal Assignment for the Symmetric Problem is-")
                 print(S)
-            else:
-                Reverse_Auction()
             return
         unass = [person for person in [i+1 for i in range(len(q))] if person not in assigned]
-
-
-def Reverse_Auction():
-    # Part - 4 : Reverse Auction
-    ...
 
 
 # Input([])
