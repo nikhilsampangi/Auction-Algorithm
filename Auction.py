@@ -12,5 +12,10 @@ def Input():
             print("\nError: Expected ", m, " values in a row")
             break
 
+    # Part -2 : Iniitial Assignment
+    S = []
+    p = [0 for i in range[m]]
+    q = [0 for i in range[n]]
+
 
 Input()
